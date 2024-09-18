@@ -1,8 +1,7 @@
 import yfinance as yf
 
 def fetch_stock_data():
-    # List of Indian stock tickers
-    stocks = ['TCS.NS', 'RELIANCE.NS', 'INFY.NS', 'HDFCBANK.NS', 'ICICIBANK.NS']
+    stocks = ['TCS.NS', 'RELIANCE.NS', 'INFY.NS', 'HDFCBANK.NS', 'ICICIBANK.NS', 'BRITANNIA.NS', 'COALINDIA.NS', 'BHARTIARTL.NS']
 
     stock_data = []
     for stock in stocks:
@@ -13,9 +12,9 @@ def fetch_stock_data():
             price = data['Close'][-1]
             previous_close = data['Close'][-2]
             change = price - previous_close
-        elif not data.empty:  # Only one day of data available
+        elif not data.empty: 
             price = data['Close'][-1]
-            previous_close = price  # Assume no change
+            previous_close = price  
             change = 0
         else:
             price = "N/A"
