@@ -1,0 +1,5 @@
+https://timesofindia.indiatimes.com,toi
+https://www.thehindu.com,hindu
+https://economictimes.indiatimes.com,et
+https://www.business-standard.com,bs
+https://indianexpress.com,ie

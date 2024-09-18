@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
+<h2>Search Results for "{{ search_query }}"</h2>
+
 <div id="entries-container">
+    {% if entries %}
     {% for entry in entries %}
     <div class="entry-container">
         <div class="entry-img-container">
@@ -9,25 +12,15 @@
             <img class="entry-img" src="{{ entry['image_url'] }}">
             {% endif %}
         </div>
-        <a class="entry-link" href="{{ url_for('article', rss_title=rss_title, entry_index=entry['id']) }}">
+        <a class="entry-link" href="{{ url_for('article', rss_title=entry['source'], entry_index=entry['id']) }}">
             <p class="entry-title">{{ entry['title'] }}</p>
             <p class="entry-summary">{{ entry['summary'] }}</p>
         </a>
         <p class="entry-date">{{ entry['published_date'] }}</p>
     </div>
     {% endfor %}
-</div>
-
-<!-- Pagination Controls -->
-<div class="pagination">
-    {% if page > 1 %}
-    <a href="{{ url_for('section', rss_title=rss_title, page=page-1) }}" class="prev-btn">&laquo; Previous</a>
-    {% endif %}
-
-    <span>Page {{ page }} of {{ total_pages }}</span>
-
-    {% if page < total_pages %}
-    <a href="{{ url_for('section', rss_title=rss_title, page=page+1) }}" class="next-btn">Next &raquo;</a>
+    {% else %}
+    <p>No results found for "{{ search_query }}".</p>
     {% endif %}
 </div>
 {% endblock %}

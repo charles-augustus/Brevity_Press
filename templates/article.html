@@ -1,8 +1,12 @@
-{% extends "section.html" %} {% block content %}
-<div class=article-container>
-    <p class=article-title>{{ entry.title }}</p>
-    <p class=article-summary>{{ entry.summary }}</p>
-    <img class=article-img src={{ entry.top_image }}>
-    <p class=article-text>{% autoescape false %}{{ entry.text.replace('\n', '<br>') }}{% endautoescape %}</p>
+{% extends "section.html" %}
+
+{% block content %}
+<div class="article-container">
+    <p class="article-title">{{ entry['title'] }}</p>
+    <p class="article-summary">{{ entry['summary'] }}</p>
+    {% if entry['image_url'] != 'No image' %}
+    <img class="article-img" src="{{ entry['image_url'] }}">
+    {% endif %}
+    <p class="article-text">{% autoescape false %}{{ entry['content'].replace('\n', '<br>') }}{% endautoescape %}</p>
 </div>
 {% endblock %}
