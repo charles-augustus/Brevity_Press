@@ -33,7 +33,7 @@ def scrape_and_store(url, source):
         content = article.maintext
         image_url = article.image_url if article.image_url else "No image"
 
-        # Insert article into the database with the source (leave summary blank for now)
+        # Insert article into the database with the source
         c.execute('''
             INSERT INTO articles (title, url, published_date, authors, content, summary, image_url, source)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)
@@ -44,12 +44,11 @@ def scrape_and_store(url, source):
     except Exception as e:
         print(f"Failed to scrape {url}: {e}")
 
-# Function to get article URLs from a given website homepage
+# Function to get article URLs
 def get_article_urls(website_url):
     response = requests.get(website_url)
     soup = BeautifulSoup(response.content, 'html.parser')
 
-    # Find all article links (for example, <a> tags with href attributes)
     article_links = set()
     for a_tag in soup.find_all('a', href=True):
         href = a_tag['href']
