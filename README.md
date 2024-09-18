@@ -1,5 +1,3 @@
----
-
 # BrevityPress: Revolutionizing News Aggregation and Summarization
 
 ### The Next Frontier in Information Management
@@ -133,5 +131,3 @@ At BrevityPress, innovation never stops. We are continuously refining our algori
 **BrevityPress** stands as a testament to the power of technology in the information age. It transforms how we interact with news, delivering actionable insights in a concise and intelligent manner. Whether you’re a busy professional or a news enthusiast, BrevityPress empowers you to stay informed—efficiently and effortlessly.
 
 We invite you to explore BrevityPress and experience a new frontier in news aggregation and summarization.
-
----
