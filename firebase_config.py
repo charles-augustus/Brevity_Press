@@ -10,7 +10,6 @@ firebase_config = {
     'storageBucket': "newspaper-d8e6e.appspot.com",
     'messagingSenderId': "139831674443",
     'appId': "1:139831674443:web:0833a9ed489d8c6cdcefce",
-    'measurementId': "YOUR_MEASUREMENT_ID"
 }
 
 firebase = pyrebase.initialize_app(firebase_config)
