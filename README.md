@@ -10,10 +10,10 @@ In today’s fast-paced digital world, where news consumption is increasingly fr
 
 ## App Preview
 
-![BrevityPress Homepage](/static/screenshots/homepage.png)
+![BrevityPress Homepage](./static/screenshots/homepage.png)
 *BrevityPress Homepage - Aggregated news and live stock ticker.*
 
-![BrevityPress Article Summary](/static/screenshots/article.png)
+![BrevityPress Article Summary](./static/screenshots/article.png)
 *Article View - AI-generated succinct summaries of long-form news.*
 
 ---
